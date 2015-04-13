@@ -50,9 +50,9 @@
 
 	<repositories>
 		<repository>
-			<id>maven@googlecode</id>
+			<id>local</id>
 			<name>Internal Maven Repo for missing artifacts</name>
-			<url>http://openpos.googlecode.com/svn/maven-repo/</url>
+			<url>https://github.com/juanromanf/openpos/maven-repo/repository</url>
 		</repository>
 		<!-- For developing against latest Spring milestones -->
 		<repository>
@@ -64,12 +64,7 @@
 			</snapshots>
 		</repository>
 	</repositories>
-
-	<scm>
-		<developerConnection>scm:svn:https://openpos.googlecode.com/svn/trunk/openpos-parent</developerConnection>
-		<connection>http://openpos.googlecode.com/svn/trunk/openpos-parent</connection>
-	</scm>
-
+	
 	<build>
 		<pluginManagement>
 			<plugins>
