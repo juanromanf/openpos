@@ -1,3 +1,7 @@
 language: java
 jdk: oraclejdk7
+before_script:
+  - mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file  -DgroupId=jpos -DartifactId=jpos -Dversion=1121 -Dfile=legacy/jpos-1121.jar -Dpackaging=jar -DgeneratePom=true
+  - mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -DgroupId=org.rxtx -DartifactId=rxtx -Dversion=2.2.pre2 -Dfile=legacy/rxtx-2.2.pre2.jar -Dpackaging=jar -DgeneratePom=true
+  - mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -DgroupId=de.grundid.fritz -DartifactId=fritzbox-java-api -Dversion=1.2-SNAPSHOT -Dfile=legacy/fritzbox-java-api-1.2-SNAPSHOT.jar -Dpackaging=jar -DgeneratePom=true
 script: mvn clean install -f openpos-parent/pom.xml
