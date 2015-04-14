@@ -22,6 +22,23 @@
 		<module>../openpos-print</module>
 		<module>../openpos-launcher</module>
 	</modules>
+	
+	<repositories>
+		<repository>
+			<id>local</id>
+			<name>Internal Maven Repo for missing artifacts</name>
+			<url>https://github.com/juanromanf/openpos/tree/master/maven-repo/repository</url>
+		</repository>
+		<!-- For developing against latest Spring milestones -->
+		<repository>
+			<id>org.springframework.maven.milestone</id>
+			<name>Spring Maven Milestone Repository</name>
+			<url>http://maven.springframework.org/milestone</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 
 	<dependencies>
 		<dependency>
@@ -46,24 +63,7 @@
 			<artifactId>mail</artifactId>
 			<version>1.4.5</version>
 		</dependency>
-	</dependencies>
-
-	<repositories>
-		<repository>
-			<id>local</id>
-			<name>Internal Maven Repo for missing artifacts</name>
-			<url>https://github.com/juanromanf/openpos/maven-repo/repository</url>
-		</repository>
-		<!-- For developing against latest Spring milestones -->
-		<repository>
-			<id>org.springframework.maven.milestone</id>
-			<name>Spring Maven Milestone Repository</name>
-			<url>http://maven.springframework.org/milestone</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
+	</dependencies>	
 	
 	<build>
 		<pluginManagement>
