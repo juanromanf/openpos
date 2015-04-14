@@ -1,3 +1,4 @@
 language: java
 jdk: oraclejdk7
-script: build.sh
+sudo: required
+script: ./build.sh
