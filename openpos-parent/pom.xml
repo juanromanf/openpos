@@ -25,7 +25,7 @@
 	
 	<repositories>
 		<repository>
-			<id>local</id>
+			<id>openpos-local</id>
 			<name>Internal Maven Repo for missing artifacts</name>
 			<url>https://github.com/juanromanf/openpos/tree/master/maven-repo/repository</url>
 		</repository>
